@@ -1,9 +1,12 @@
 .wrapper{
-  background-color: aqua;
-  .container{
-    margin: 0 auto;
-    max-width: 1480px;
-    
-    padding: 20px;
+  #header{
+    background-color: aqua;
+    .container{
+      margin: 0 auto;
+      max-width: 1480px;
+      
+      padding: 20px;
+    }
   }
+
 }

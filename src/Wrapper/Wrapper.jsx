@@ -11,8 +11,10 @@ export const Wrapper = () => {
   return (
     <div className="wrapper">
       {/* block example  */}
-      <div className="container">
-        <BurgerAndOverlayBlock chOverlayStyle={chOverlayStyle} chBurgerStyle={chBurgerStyle}  />
+      <div id="header">
+        <div className="container">
+          <BurgerAndOverlayBlock chOverlayStyle={chOverlayStyle} chBurgerStyle={chBurgerStyle}  />
+        </div>
       </div>
       {/* end block */}
       {/* block overlays btns collection */}
