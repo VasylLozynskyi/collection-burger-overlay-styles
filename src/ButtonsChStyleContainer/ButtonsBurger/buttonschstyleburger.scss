@@ -1,0 +1,37 @@
+.buttons-ch-style-burger_block {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid aqua;
+  text-align: center;
+  border-radius: 10px;
+  h2 {
+    margin-bottom: 20px;
+  }
+  > ._flex_block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    #burger-btn {
+      min-width: 70px;
+      height: 25px;
+      border-radius: 10px;
+      background-color: aqua;
+      transition: 0.5s;
+      padding: 0 5px;
+      &:hover {
+        background-color: rgb(204, 255, 255);
+        outline: 1px solid aqua;
+      }
+      &.focus_false {
+        background-color: aqua;
+        color: black;
+      }
+      &.focus_true {
+        background-color: rgb(0, 88, 88);
+        color: white;
+      }
+    }
+  }
+}

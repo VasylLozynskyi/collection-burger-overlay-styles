@@ -1,0 +1,382 @@
+// $dark: #212121;
+$dark: var(--colorBurger);
+$light: #efefef;
+$color: var(--colorCloseBurger);
+
+.burger_container {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  z-index: 1001;
+  &:hover {
+    cursor: pointer;
+  }
+  .burger {
+    position: absolute;
+    transition-duration: 0.5s;
+  }
+}
+
+@mixin icon($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: $height;
+  width: $width;
+  background-color: $dark;
+  top: $top;
+}
+
+@mixin icon-before($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: $dark;
+  content: "";
+  top: $top;
+}
+
+@mixin icon-after($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: $dark;
+  content: "";
+  top: $top;
+}
+
+@mixin icon-circle($height, $width) {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: $height;
+  width: $width;
+  top: 2px;
+  border-radius: 100%;
+  background: transparent;
+  border: 4px solid black;
+  left: -15px;
+}
+
+.hamburger {
+  .icon-left {
+    @include icon(6px, 15px, 12px);
+
+    &:before {
+      @include icon-before(6px, 15px, -12px);
+    }
+
+    &:after {
+      @include icon-after(6px, 15px, 12px);
+    }
+  }
+
+  .icon-right {
+    @include icon(6px, 15px, 12px);
+    left: 15px;
+
+    &:before {
+      @include icon-before(6px, 15px, -12px);
+    }
+
+    &:after {
+      @include icon-after(6px, 15px, 12px);
+    }
+  }
+
+  &.open {
+    .icon-left {
+      transition-duration: 0.5s;
+      background-color: transparent;
+
+      &:before {
+        transform: rotateZ(45deg) scaleX(1.4) translate(4px, 4px);
+        background-color: $color;
+      }
+
+      &:after {
+        transform: rotateZ(-45deg) scaleX(1.4) translate(4px, -4px);
+        background-color: $color;
+      }
+    }
+
+    .icon-right {
+      transition-duration: 0.5s;
+      background-color: transparent;
+
+      &:before {
+        transform: rotateZ(-45deg) scaleX(1.4) translate(-4px, 4px);
+        background-color: $color;
+      }
+
+      &:after {
+        transform: rotateZ(45deg) scaleX(1.4) translate(-4px, -4px);
+        background-color: $color;
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.hamburger2 {
+  .icon {
+    @include icon(6px, 30px, 12px);
+
+    &:before {
+      @include icon-before(6px, 30px, -12px);
+    }
+
+    &:after {
+      @include icon-after(6px, 30px, 12px);
+    }
+  }
+
+  &.open {
+    .icon {
+      transition-duration: 0.5s;
+      background: transparent;
+
+      &:before {
+        transform: rotateZ(45deg) scaleX(1.25) translate(5px, 5px);
+        background: $color;
+      }
+
+      &:after {
+        transform: rotateZ(-45deg) scaleX(1.25) translate(10px, -10px);
+        background: $color;
+      }
+    }
+  }
+}
+
+.two-lines {
+  .icon {
+    @include icon(0px, 30px, 12px);
+
+    &:before {
+      @include icon-before(6px, 30px, -12px);
+    }
+
+    &:after {
+      @include icon-after(6px, 30px, 12px);
+    }
+  }
+
+  &.open {
+    .icon {
+      transition-duration: 0.5s;
+
+      &:before {
+        transform: rotateZ(135deg) scaleX(1.25) translate(10px, -10px);
+        background: $color;
+      }
+
+      &:after {
+        transform: rotateZ(-135deg) scaleX(1.25) translate(5px, 5px);
+        background: $color;
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.two-lines2{
+
+  .icon {
+    @include icon(0px, 30px, 12px);
+
+    &:before{
+      @include icon-before(6px, 30px, -12px);
+    }
+
+    &:after{
+      @include icon-after(6px, 30px, 12px);
+    }
+  }
+
+  &.open {
+    .icon {
+      transition: 0.5s;
+
+      &:before{
+        transform: rotateZ(45deg) scaleX(1.25) translate(5px, 5px);
+        background: $color;
+      }
+
+      &:after{
+        transform: rotateZ(-45deg) scaleX(1.25) translate(10px, -10px);
+        background: $color;
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.arrow{
+
+  .icon {
+    @include icon(6px, 30px, 12px);
+
+    &:before{
+      @include icon-before(6px, 30px, -12px);
+    }
+
+    &:after{
+      @include icon-after(6px, 30px, 12px);
+    }
+  }
+
+  &.open {
+    .icon {
+      transition: 0.5s;
+      background: $color;
+
+      &:before{
+        transform: rotateZ(-45deg) scaleX(0.75) translate(-13px, -1px);
+        background: $color;
+      }
+
+      &:after{
+        transform: rotateZ(45deg) scaleX(0.75) translate(-13px, 1px);
+        background: $color;
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.arrow2{
+
+  .icon {
+    @include icon(6px, 30px, 12px);
+
+    &:before{
+      @include icon-before(6px, 30px, -12px);
+    }
+
+    &:after{
+      @include icon-after(6px, 30px, 12px);
+    }
+  }
+
+  &.open {
+    .icon {
+      transition-duration: 0.5s;
+      transform: rotateZ(180deg);
+      background: $color;
+
+      &:before{
+        transform: rotateZ(45deg) scaleX(0.75) translate(13px, -1px);
+        background: $color;
+      }
+
+      &:after{
+        transform: rotateZ(-45deg) scaleX(0.75) translate(13px, 1px);
+        background: $color;
+      }
+    }
+  }
+}
+
+.hamburger3{
+
+  .icon-E {
+    @include icon(6px, 30px, 12px);
+    transition-delay: 0.5s;
+
+    &:before{
+      @include icon-before(6px, 30px, -12px);
+    }
+
+    &:after{
+      @include icon-after(6px, 30px, 12px);
+    }
+  }
+
+  .icon-X {
+    @include icon(0px, 200px, 0px);
+    transform: scaleX(0);
+    transform-origin: 30px 0px;
+
+    &:before{
+      @include icon-before(6px, 30px, -12px);
+      transform: rotateZ(45deg) scaleX(1.25) translate(14px, 16px);
+      background: $color;
+    }
+
+    &:after{
+      @include icon-after(6px, 30px, 12px);
+      transform: rotateZ(-45deg) scaleX(1.25) translate(0px, 0px);
+      background: $color;
+    }
+  }
+
+  &.open {
+    .icon-E {
+      transition-duration: 0.5s;
+      transform: scaleX(0);
+      transition-delay: 0s;
+    }
+
+    .icon-X {
+      transition: 0.5s;
+      transition-delay: 0.5s;
+      transform: scaleX(1);
+    }
+  }
+}
+
+.hamburger4{
+
+  .icon-E {
+    @include icon(6px, 30px, 12px);
+    transform-origin: 0px 0px;
+    transition-delay: 0.5s;
+
+    &:before{
+      @include icon-before(6px, 30px, -12px);
+    }
+
+    &:after{
+      @include icon-after(6px, 30px, 12px);
+    }
+  }
+
+  .icon-X {
+    @include icon(0px, 30px, 0px);
+    transform-origin: 0px 0px;
+    transform: scaleY(0);
+
+    &:before{
+      @include icon-before(6px, 30px, -12px);
+      transform: rotateZ(45deg) scaleX(1.25) translate(14px, 16px);
+      background: $color;
+    }
+
+    &:after{
+      @include icon-after(6px, 30px, 12px);
+      transform: rotateZ(-45deg) scaleX(1.25) translate(0px, 0px);
+      background: $color;
+    }
+  }
+  &.open {
+    .icon-E {
+      transition-duration: 0.5s;
+      transform: scaleY(0);
+      transition-delay: 0s;
+    }
+    .icon-X {
+      transition: 0.5s;
+      transition-delay: 0.5s;
+      transform: scaleY(1);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "./styles/slide.scss";
+@import "./styles/elastic.scss";
+@import "./styles/bubble.scss";
+@import "./styles/fall.scss";
+@import "./styles/rotate.scss";
+@import "./styles/matrix.scss";
+@import "./styles/scale.scss";
+
+div #overlay{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}

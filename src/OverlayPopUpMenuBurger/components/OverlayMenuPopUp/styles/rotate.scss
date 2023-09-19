@@ -1,0 +1,20 @@
+.rotate{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  animation: overlay-rotate 1s;
+}
+
+@keyframes overlay-rotate {
+  0% {
+    transform: rotate(0) scale(0.1);
+
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,25 @@
+.bubble{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  animation: overlay-bubble 1s;
+}
+
+@keyframes overlay-bubble {
+  0% {
+    transform: translate(-100vw, 0);
+    border-top-right-radius: 50vh;
+    border-bottom-right-radius: 50vh;
+  }
+  80%{
+    border-top-right-radius: 50vh;
+    border-bottom-right-radius: 50vh;
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}

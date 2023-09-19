@@ -1,0 +1,20 @@
+.elastic{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  animation: overlay-elastic 1s;
+}
+
+@keyframes overlay-elastic {
+  0% {
+    transform: translate(-100vw, -100vh) scale(0.1);
+  }
+  50%{
+    transform: scale(0.5);
+  }
+
+}
