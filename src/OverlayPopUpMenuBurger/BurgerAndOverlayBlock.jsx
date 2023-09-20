@@ -14,7 +14,8 @@ export const BurgerAndOverlayBlock = ({ chOverlayStyle, chBurgerStyle }) => {
       <Burger
         showPopUp={setShowPopUp}  //func close pop-up
         chPopUp={showPopUp} // check pop-up 
-        // hamburger, hamburger2, hamburger3, hamburger4, two-lines, two-lines2, arrow, arrow2
+        // hamburger, hamburger2, hamburger3, hamburger4, two-lines, two-lines2, arrow, arrow2,
+        //kebab, hot-dog, fries, strawberry, Chocolate
         burgerStyle={chBurgerStyle} // style burger button
         // hidden  // hidden close button
         colorBurger={""} // color burger button

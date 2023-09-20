@@ -9,6 +9,11 @@ const btns = [
   {id: 6, name: "Two-lines2"},
   {id: 7, name: "Arrow"},
   {id: 8, name: "Arrow2"},
+  {id: 9, name: "Kebab"},
+  {id: 10, name: "Hot-dog"},
+  {id: 11, name: "Fries"},
+  {id: 12, name: "Strawberry"},
+  {id: 13, name: "Chocolate"},
 ]
 
 export const ButtonsChStyleBurger = ({ chBurgerStyle, focus }) => {

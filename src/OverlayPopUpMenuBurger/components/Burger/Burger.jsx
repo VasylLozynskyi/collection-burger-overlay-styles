@@ -36,7 +36,8 @@ export const Burger = ({
             colorCloseBurger.length !== 0 ? colorCloseBurger : "aqua",
         }}
       >
-        {burgerStyle.toLowerCase() === "hamburger" && (
+        {(burgerStyle.toLowerCase() === "hamburger"
+          ) && (
           <>
             <div className="icon-left"></div>
             <div className="icon-right"></div>
@@ -46,7 +47,11 @@ export const Burger = ({
           burgerStyle.toLowerCase() === "two-lines" ||
           burgerStyle.toLowerCase() === "two-lines2" ||
           burgerStyle.toLowerCase() === "arrow" ||
-          burgerStyle.toLowerCase() === "arrow2") && (
+          burgerStyle.toLowerCase() === "arrow2" ||
+          burgerStyle.toLowerCase() === "kebab" ||
+          burgerStyle.toLowerCase() === "hot-dog" ||
+          burgerStyle.toLowerCase() === "fries" ||
+          burgerStyle.toLowerCase() === "strawberry") && (
           <>
             <div className="icon"></div>
           </>
@@ -56,6 +61,14 @@ export const Burger = ({
           <>
            <div className="icon-E"></div>
            <div className="icon-X"></div>
+          </>
+        )}
+        {(burgerStyle.toLowerCase() === "chocolate"
+          ) && (
+          <>
+            <div className="icon-left"></div>
+            <div className="icon-center"></div>
+            <div className="icon-right"></div>
           </>
         )}
       </div>

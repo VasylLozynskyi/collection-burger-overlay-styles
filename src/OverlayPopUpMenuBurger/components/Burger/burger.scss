@@ -1,6 +1,5 @@
 // $dark: #212121;
 $dark: var(--colorBurger);
-$light: #efefef;
 $color: var(--colorCloseBurger);
 
 .burger_container {
@@ -184,16 +183,15 @@ $color: var(--colorCloseBurger);
   }
 }
 
-.two-lines2{
-
+.two-lines2 {
   .icon {
     @include icon(0px, 30px, 12px);
 
-    &:before{
+    &:before {
       @include icon-before(6px, 30px, -12px);
     }
 
-    &:after{
+    &:after {
       @include icon-after(6px, 30px, 12px);
     }
   }
@@ -202,12 +200,12 @@ $color: var(--colorCloseBurger);
     .icon {
       transition: 0.5s;
 
-      &:before{
+      &:before {
         transform: rotateZ(45deg) scaleX(1.25) translate(5px, 5px);
         background: $color;
       }
 
-      &:after{
+      &:after {
         transform: rotateZ(-45deg) scaleX(1.25) translate(10px, -10px);
         background: $color;
       }
@@ -218,16 +216,15 @@ $color: var(--colorCloseBurger);
   }
 }
 
-.arrow{
-
+.arrow {
   .icon {
     @include icon(6px, 30px, 12px);
 
-    &:before{
+    &:before {
       @include icon-before(6px, 30px, -12px);
     }
 
-    &:after{
+    &:after {
       @include icon-after(6px, 30px, 12px);
     }
   }
@@ -237,12 +234,12 @@ $color: var(--colorCloseBurger);
       transition: 0.5s;
       background: $color;
 
-      &:before{
+      &:before {
         transform: rotateZ(-45deg) scaleX(0.75) translate(-13px, -1px);
         background: $color;
       }
 
-      &:after{
+      &:after {
         transform: rotateZ(45deg) scaleX(0.75) translate(-13px, 1px);
         background: $color;
       }
@@ -253,16 +250,15 @@ $color: var(--colorCloseBurger);
   }
 }
 
-.arrow2{
-
+.arrow2 {
   .icon {
     @include icon(6px, 30px, 12px);
 
-    &:before{
+    &:before {
       @include icon-before(6px, 30px, -12px);
     }
 
-    &:after{
+    &:after {
       @include icon-after(6px, 30px, 12px);
     }
   }
@@ -273,12 +269,12 @@ $color: var(--colorCloseBurger);
       transform: rotateZ(180deg);
       background: $color;
 
-      &:before{
+      &:before {
         transform: rotateZ(45deg) scaleX(0.75) translate(13px, -1px);
         background: $color;
       }
 
-      &:after{
+      &:after {
         transform: rotateZ(-45deg) scaleX(0.75) translate(13px, 1px);
         background: $color;
       }
@@ -286,17 +282,16 @@ $color: var(--colorCloseBurger);
   }
 }
 
-.hamburger3{
-
+.hamburger3 {
   .icon-E {
     @include icon(6px, 30px, 12px);
     transition-delay: 0.5s;
 
-    &:before{
+    &:before {
       @include icon-before(6px, 30px, -12px);
     }
 
-    &:after{
+    &:after {
       @include icon-after(6px, 30px, 12px);
     }
   }
@@ -306,13 +301,13 @@ $color: var(--colorCloseBurger);
     transform: scaleX(0);
     transform-origin: 30px 0px;
 
-    &:before{
+    &:before {
       @include icon-before(6px, 30px, -12px);
       transform: rotateZ(45deg) scaleX(1.25) translate(14px, 16px);
       background: $color;
     }
 
-    &:after{
+    &:after {
       @include icon-after(6px, 30px, 12px);
       transform: rotateZ(-45deg) scaleX(1.25) translate(0px, 0px);
       background: $color;
@@ -334,18 +329,17 @@ $color: var(--colorCloseBurger);
   }
 }
 
-.hamburger4{
-
+.hamburger4 {
   .icon-E {
     @include icon(6px, 30px, 12px);
     transform-origin: 0px 0px;
     transition-delay: 0.5s;
 
-    &:before{
+    &:before {
       @include icon-before(6px, 30px, -12px);
     }
 
-    &:after{
+    &:after {
       @include icon-after(6px, 30px, 12px);
     }
   }
@@ -355,13 +349,13 @@ $color: var(--colorCloseBurger);
     transform-origin: 0px 0px;
     transform: scaleY(0);
 
-    &:before{
+    &:before {
       @include icon-before(6px, 30px, -12px);
       transform: rotateZ(45deg) scaleX(1.25) translate(14px, 16px);
       background: $color;
     }
 
-    &:after{
+    &:after {
       @include icon-after(6px, 30px, 12px);
       transform: rotateZ(-45deg) scaleX(1.25) translate(0px, 0px);
       background: $color;
@@ -377,6 +371,220 @@ $color: var(--colorCloseBurger);
       transition: 0.5s;
       transition-delay: 0.5s;
       transform: scaleY(1);
+    }
+  }
+}
+
+.kebab {
+  .icon {
+    @include icon(6px, 6px, 12px);
+    border-radius: 5px;
+    left: 15px;
+
+    &:before {
+      @include icon-before(6px, 6px, -12px);
+      border-radius: 5px;
+    }
+
+    &:after {
+      @include icon-after(6px, 6px, 12px);
+      border-radius: 5px;
+    }
+  }
+
+  &.open {
+    .icon {
+      transition-duration: 0.5s;
+      background: transparent;
+
+      &:before {
+        @include icon(6px, 30px, 12px);
+        transform: rotateZ(45deg) scaleX(1.25) translate(-13px, 0px);
+        background: $color;
+      }
+
+      &:after {
+        @include icon(6px, 30px, 12px);
+        transform: rotateZ(-45deg) scaleX(1.25) translate(0px, -16px);
+        background: $color;
+      }
+    }
+  }
+}
+
+.hot-dog {
+  .icon {
+    @include icon(6px, 30px, 12px);
+
+    &:before {
+      @include icon-before(6px, 20px, -12px);
+      left: 5px;
+    }
+
+    &:after {
+      @include icon-after(6px, 20px, 12px);
+      left: 5px;
+    }
+  }
+
+  &.open {
+    .icon {
+      transition-duration: 0.5s;
+      background: transparent;
+
+      &:before {
+        @include icon(6px, 30px, 12px);
+        transform: rotateZ(45deg) scaleX(1.25) translate(-10px, -5px);
+        background: $color;
+      }
+
+      &:after {
+        @include icon(6px, 30px, 12px);
+        transform: rotateZ(-45deg) scaleX(1.25) translate(4px, -13px);
+        background: $color;
+      }
+    }
+  }
+}
+
+.fries {
+  .icon {
+    @include icon(6px, 20px, 12px);
+
+    &:before {
+      @include icon-before(6px, 30px, -12px);
+    }
+
+    &:after {
+      @include icon-after(6px, 30px, 12px);
+    }
+  }
+
+  &.open {
+    .icon {
+      transition-duration: 0.5s;
+      background: transparent;
+
+      &:before {
+        @include icon(6px, 30px, 12px);
+        transform: rotateZ(45deg) scaleX(1.25) translate(-10px, -5px);
+        background: $color;
+      }
+
+      &:after {
+        @include icon(6px, 30px, 12px);
+        transform: rotateZ(-45deg) scaleX(1.25) translate(4px, -13px);
+        background: $color;
+      }
+    }
+  }
+}
+
+.strawberry {
+  .icon {
+    @include icon(6px, 20px, 12px);
+    left: 5px;
+    &:before {
+      @include icon-before(6px, 30px, -12px);
+      left: -5px;
+    }
+
+    &:after {
+      @include icon-after(6px, 10px, 12px);
+      left: 5px;
+    }
+  }
+
+  &.open {
+    .icon {
+      transition-duration: 0.5s;
+      background: transparent;
+
+      &:before {
+        @include icon(6px, 30px, 12px);
+        transform: rotateZ(45deg) scaleX(1.25) translate(-8px, -8px);
+        background: $color;
+      }
+
+      &:after {
+        @include icon(6px, 30px, 12px);
+        transform: rotateZ(-45deg) scaleX(1.25) translate(2px, -16px);
+        background: $color;
+      }
+    }
+  }
+}
+
+.chocolate {
+  .icon-left {
+    @include icon(6px, 6px, 12px);
+    border-radius: 3px;
+
+    &:before {
+      @include icon-before(6px, 6px, -12px);
+      border-radius: 3px;
+    }
+
+    &:after {
+      @include icon-after(6px, 6px, 12px);
+      border-radius: 3px;
+    }
+  }
+
+  .icon-center {
+    @include icon(6px, 6px, 12px);
+    left: 12px;
+    border-radius: 3px;
+    &:before {
+      @include icon-before(6px, 6px, -12px);
+      border-radius: 3px;
+    }
+
+    &:after {
+      @include icon-after(6px, 6px, 12px);
+      border-radius: 3px;
+    }
+  }
+
+  .icon-right {
+    @include icon(6px, 6px, 12px);
+    left: 24px;
+    border-radius: 3px;
+    &:before {
+      @include icon-before(6px, 6px, -12px);
+      border-radius: 3px;
+    }
+
+    &:after {
+      @include icon-after(6px, 6px, 12px);
+      border-radius: 3px;
+    }
+  }
+
+  &.open {
+    .icon-left {
+      transition-duration: 0.5s;
+      background-color: transparent;
+
+      &:before {
+        @include icon(6px, 30px, 12px);
+        transform: rotateZ(45deg) scaleX(1.25) translate(-5px, -8px);
+        background-color: $color;
+      }
+
+      &:after {
+
+        @include icon(6px, 30px, 12px);
+        transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
+        background-color: $color;
+      }
+    }
+    .icon-center {
+      display: none;
+    }
+
+    .icon-right {
+    display: none;
     }
   }
 }
