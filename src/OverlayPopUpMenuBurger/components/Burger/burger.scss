@@ -7,8 +7,10 @@ $color: var(--colorCloseBurger);
   width: 30px;
   height: 30px;
   z-index: 1001;
+  transition: 0.5s;
   &:hover {
     cursor: pointer;
+    transform: scale(0.9);
   }
   .burger {
     position: absolute;

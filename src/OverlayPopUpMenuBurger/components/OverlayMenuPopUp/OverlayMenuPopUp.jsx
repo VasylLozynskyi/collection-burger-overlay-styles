@@ -1,11 +1,8 @@
-import { forwardRef } from "react";
 import "./overlaymenupopup.scss";
 
-export const OverlayMenuPopUp = forwardRef(
-  ({ overlayStyle, showPopUp, overlayColor, time, width, ...props }, ref) => {
+export const OverlayMenuPopUp = ({ overlayStyle, showPopUp, overlayColor, time, width, ...props }) => {
     return (
       <div
-        ref={ref}
         style={{ backgroundColor: overlayColor, animationDuration: `${time}s`, width: width  }}
         id="overlay"
         className={`${(overlayStyle.length !== 0 && overlayStyle !== undefined) ? overlayStyle.toLowerCase() : "" }`}
@@ -19,4 +16,5 @@ export const OverlayMenuPopUp = forwardRef(
       </div>
     );
   }
-);
+
+  // export default OverlayMenuPopUp;

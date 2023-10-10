@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Burger } from "./components/Burger/Burger";
 import { OverlayMenuPopUp } from "./components/OverlayMenuPopUp/OverlayMenuPopUp";
 
@@ -6,7 +6,6 @@ import "./burgerandoverlayblock.scss";
 
 export const BurgerAndOverlayBlock = ({ chOverlayStyle, chBurgerStyle }) => {
   const [showPopUp, setShowPopUp] = useState(false);
-  const ref = useRef();
 
   return (
     <>
@@ -27,7 +26,6 @@ export const BurgerAndOverlayBlock = ({ chOverlayStyle, chBurgerStyle }) => {
       {showPopUp && (
         <>
           <OverlayMenuPopUp
-            ref={ref} // need for REFS !important
             showPopUp={setShowPopUp} // func to close pop-up on overlay
             overlayColor={""} // color of overlay (default rgba(0, 0, 0, 0.3))
             time={""} // time of open pop-up (default 1s)
